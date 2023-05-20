@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+.maindiv {
+  background-color: #ccd5de;
+  min-height: 100vh;
+  max-height: fit-content;
+  width: 100%;
+  padding: 1rem;
+}
+
+.main-heading {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+.addtodo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+              -6px -6px 10px -1px rgba(245, 245, 245, 0.7);
+  width: fit-content;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.addtodo .collapsediv {
+  min-height: 0;
+  max-height: fit-content;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.addtodo .collapsediv .title {
+  width: 20rem;
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.addtodo .title:focus {
+  border: 2px solid #000000;
+}
+
+.addtodo .collapsediv .task {
+  width: 20rem;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0.5rem;
+  resize: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addtodo .task:focus {
+  border: 2px solid #000000;
+}
+
+.addtodo .aftercollapse {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+  align-items: center;
+}
+
+.addtodo .aftercollapse .collapsediv-heading {
+  font-size: 2rem;
+}
+
+.addtodo .aftercollapse .toggle-btn , .submit-btn{
+  width: 3rem;
+  height: 3rem;
+  background-color: #44474a;
+  border: none;
+  border-radius: 50%;
+  transition: all linear 0.1s;
+}
+
+.toggle-btn:active , .submit-btn:active {
+  transform: scale(0.9);
+}
+
+.addtodo .toggle-btn ion-icon , .submit-btn ion-icon{
+  color: #fff;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.open {
+  max-height: fit-content !important;
+  padding: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.done-btn:hover {
+  color: #00b300;
+}
+
+.edit-btn:hover {
+  color: #3333ff;
+}
+
+.remove-btn:hover {
+  color: #b30000;
+}
+
+.container-fluid {
+  margin-top: 3rem;
+}
+
+.taskdiv {
+  display: flex;
+  padding: 1.2rem;
+  flex-direction: column;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+              -6px -6px 10px -1px rgba(245, 245, 245, 0.7);
+  border-radius: 1rem;
+  margin-top: 1.5rem !important;
+  word-wrap: break-word;
+  transition: all linear 0.3s;
+}
+
+.boundary1 {
+  border: #72777c 2px solid;
+}
+
+.boundary2 {
+  border: #00b300 2px solid;
+}
+
+.taskdiv .buttondiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.taskedit {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0.5rem;
+  resize: none;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.titleedit {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: bolder;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.titleedit:focus, .taskedit:focus {
+  border: 1px solid #000000;
+}
+
+.taskheading {
+  outline: none;
+  border: none;
+  padding: 4px;
+}
+
+.task-info {
+  outline: none;
+  border: none;
+  padding: 4px;
+}
+
+.taskheading:focus {
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.task-info:focus {
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+.action-btn {
+  background-color: #44474a;
+  border: none;
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all linear 0.1s;
+}
+
+.action-btn:active {
+  transform: scale(0.9);
+}
+
+.action-btn ion-icon {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.status {
+  text-align: center;
+}
+
+@media (max-width:1200px){
+  html{
+   font-size: 90%;
+  }
+}
+
+@media (max-width:992px){
+   html{
+       font-size: 80%;
+      }
+}
+
+@media (max-width:780px){
+   html{
+       font-size: 70%;
+      }
+}
+
+@media (max-width:576px){
+   html{
+       font-size: 70%;
+      }
+}
+
+@media (max-width:400px) {
+   html {
+       font-size: 60%;
+   }
+}
+
